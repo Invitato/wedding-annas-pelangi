@@ -280,3 +280,7 @@ export const styButtonWrapper = css`
     border: none;
   }
 `;
+
+export const styMarginFinal = (px) => css`
+  margin-top: ${px}rem;
+`;

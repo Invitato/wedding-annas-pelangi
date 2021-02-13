@@ -7,7 +7,7 @@ import WithAnimation from '../WithAnimation/UseIntersect';
 import ScrollToDown from './ScrollToDown';
 import Countdown from '../Countdown';
 
-import { styWrapper, styHero, styBackground } from './styles';
+import { styWrapper, styHero, styBackground, styMarginFinal } from './styles';
 
 const DELAY_TIME = 1500;
 
@@ -20,6 +20,8 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
     const element = document.getElementById('id-hello-section').offsetTop;
     animateScroll.scrollTo(element);
   };
+
+  console.log('=> LATEST VERSION', { guestName });
 
   const handleShowDetail = () => {
     if (loading) return undefined;
@@ -66,24 +68,12 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
                 <h2 className="text__date">The wedding of</h2>
                 <h1 className="text__title">{THE_BRIDE}</h1>
               </WithAnimation>
-              {guestName ? (
-                <>
-                  <div style={{ marginTop: '20rem' }}>
-                    <WithAnimation>
-                      <Countdown />
-                    </WithAnimation>
-                  </div>
-                  {renderDearest()}
-                </>
-              ) : (
-                <>
-                  <div style={{ marginTop: '30rem' }}>
-                    <WithAnimation>
-                      <Countdown />
-                    </WithAnimation>
-                  </div>
-                </>
-              )}
+              <div css={guestName ? styMarginFinal(20) : styMarginFinal(30)}>
+                <WithAnimation>
+                  <Countdown />
+                </WithAnimation>
+              </div>
+              {guestName && renderDearest()}
             </div>
           </div>
         </div>
