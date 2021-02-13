@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import Background from '@assets/img/pattern.png';
+import Background from './assets/quran.png';
 
 export const styWrapper = css`
   padding: var(--size-content-padding);
@@ -17,6 +17,12 @@ export const styWrapper = css`
 
   .title {
     font-size: 4em;
+  }
+
+  .text__title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--font-black-ui);
   }
 
   .sub-title {
@@ -38,7 +44,6 @@ export const styWrapper = css`
   }
 
   .text__arabic {
-    margin-top: 2em;
     font-size: 20px;
     line-height: 2;
     color: var(--font-primary);
@@ -47,7 +52,6 @@ export const styWrapper = css`
   .text__latin {
     color: var(--font-primary);
     font-size: 14px;
-    margin-bottom: 12em;
   }
 
   @media screen and (max-width: 500px) {
