@@ -3,17 +3,17 @@ import useGuestData from '@/hooks/useGuestData';
 
 const PERSONAL = 1;
 const ALL = 2;
+const HOSTNAME = 'https://invitato.net/wedding-annas-pelangi';
 
 function GenerateLink() {
   const [type, setType] = useState(PERSONAL);
   const [name, setName] = useState();
   const [showResult, setShowResult] = useState(false);
   const [successCopy, setSuccessCopy] = useState(false);
-  const [isInvitation, setIsInvitation] = useState(false);
 
   const { data, loading } = useGuestData();
 
-  const URL = `https://thekusuma.com?to=${encodeURIComponent(name)}`;
+  const URL = `${HOSTNAME}?to=${encodeURIComponent(name)}`;
 
   const handleChange = (e) => {
     setType(parseInt(e.target.value, 10));
@@ -28,7 +28,7 @@ function GenerateLink() {
     try {
       await navigator.clipboard.writeText(text);
       setSuccessCopy(true);
-      showAlert && alert('Berhasil');
+      showAlert && alert('URL Berhasil disalin di clipboard');
     } catch (err) {
       setSuccessCopy(false);
       alert('Failed to copy! :(');
@@ -59,12 +59,6 @@ function GenerateLink() {
     if (type === ALL) {
       return (
         <Fragment>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" checked={isInvitation} onClick={() => setIsInvitation(!isInvitation)} /> Tipe
-              Invitation (Datang offline)
-            </label>
-          </div>
           <button type="submit" class="btn btn-primary" onClick={() => setShowResult(true)}>
             Generate Link
           </button>
@@ -104,23 +98,28 @@ function GenerateLink() {
             <table class="table">
               <thead>
                 <tr>
-                  <th>No</th>
                   <th>Nama</th>
-                  <th>Keterangan</th>
                   <th>Link</th>
                 </tr>
               </thead>
               <tbody>
                 {data.map((d, index) => {
-                  const offlineInvitation = isInvitation ? `&type=invitation&code=${d.code}` : '';
-                  const mapURL = `https://thekusuma.com?to=${encodeURIComponent(d.name)}${offlineInvitation}`;
+                  const offlineInvitation = '';
+                  const mapURL = `${HOSTNAME}?to=${encodeURIComponent(d.name)}${offlineInvitation}`;
                   return (
                     <tr>
-                      <td>{index + 1}</td>
                       <td>{d.name}</td>
-                      <td>{d.desc}</td>
                       <td>
-                        <a href={mapURL} target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>
+                        <a
+                          href={mapURL}
+                          target="_blank"
+                          rel="noreferrer"
+                          style={{ textDecoration: 'underline' }}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleCopy(mapURL, true);
+                          }}
+                        >
                           {mapURL}
                         </a>
                         <button
@@ -145,7 +144,7 @@ function GenerateLink() {
   return (
     <div>
       <h2 className="title">Generator of Link Invitation</h2>
-      <h3 className="title__sub">Dinda & Indra Wedding</h3>
+      <h3 className="title__sub">Annas & Pelangi</h3>
 
       {loading && <h4 style={{ textAlign: 'center' }}>Memuat data..</h4>}
 
