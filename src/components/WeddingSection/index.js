@@ -12,6 +12,8 @@ import {
 
 import WithAnimation from '../WithAnimation/UseIntersect';
 import WeddingInfoBox from './WeddingInfoBox';
+import ButtonLive from './ButtonLive';
+
 import { styWrapper } from './styles';
 
 function WeddingSection({ isInvitation }) {
@@ -53,6 +55,7 @@ function WeddingSection({ isInvitation }) {
           </div>
         </div>
       </div>
+      <ButtonLive />
     </div>
   );
 }

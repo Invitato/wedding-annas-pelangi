@@ -1,7 +1,7 @@
 import React from 'react';
 import { bool } from 'prop-types';
 
-import WithAnimation from '../WithAnimation';
+import WithAnimation from '../WithAnimation/UseIntersect';
 import CopyRight from './CopyRight';
 import Wishes from '../WishesSection';
 // import EmbedLive from './EmbedLive';

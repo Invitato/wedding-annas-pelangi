@@ -1,11 +1,7 @@
 import { css } from '@emotion/core';
-import Wave from './assets/wave.svg';
 
 export const styWrapper = css`
   background: var(--secondary-bg);
-  background-image: url(${Wave});
-  background-position: bottom center;
-  background-repeat: no-repeat;
 
   .info {
     font-size: 16px;

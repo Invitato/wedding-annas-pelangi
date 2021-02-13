@@ -34,6 +34,7 @@ export const styWrapper = css`
   .text__live {
     text-align: center;
     margin-top: 24px;
+    color: white;
   }
 
   .main-font {
@@ -100,7 +101,7 @@ export const styButtonWrapper = css`
     align-items: center;
     font-weight: 500px;
     border-radius: 24px;
-    background: #f14e95;
+    background: white;
     padding: 8px 16px;
   }
 
