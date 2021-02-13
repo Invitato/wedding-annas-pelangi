@@ -5,6 +5,7 @@ import { animateScroll } from 'react-scroll';
 import { THE_BRIDE } from '@/constants';
 import WithAnimation from '../WithAnimation/UseIntersect';
 import ScrollToDown from './ScrollToDown';
+import Countdown from '../Countdown';
 
 import { styWrapper, styHero, styBackground } from './styles';
 
@@ -47,8 +48,8 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
 
   return (
     <div css={styHero}>
-      <header className="fh5co-cover" css={styBackground}>
-        {/* <div className="overlay" /> */}
+      <header css={styBackground}>
+        <div className="overlay" />
         <div className="container">
           <div className="row" css={styWrapper}>
             <div className="col-md-8 col-md-offset-2 text-center">
@@ -57,16 +58,23 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
                   <span className="text__span">The wedding of</span>
                 </h2>
                 <h1 className="text__title">
-                  <span className="text__span">{THE_BRIDE}</span>
+                  <span className="text__span" style={{ padding: '4px 16px' }}>
+                    {THE_BRIDE}
+                  </span>
                 </h1>
               </WithAnimation>
             </div>
           </div>
-          <div className="row">
-            <ScrollToDown loading={loading} onClick={handleShowDetail} />
-          </div>
         </div>
       </header>
+      <WithAnimation>
+        <div style={{ marginTop: `calc(100% - ${alreadyDownloadData ? '0' : '20px'})` }}>
+          <Countdown />
+        </div>
+      </WithAnimation>
+      <div className="row">
+        <ScrollToDown loading={loading} onClick={handleShowDetail} />
+      </div>
     </div>
   );
 }

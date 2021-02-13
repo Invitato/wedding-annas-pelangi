@@ -4,7 +4,7 @@ import { styWrapperCount } from './styles';
 
 function CountItem({ number, text }) {
   return (
-    <div css={styWrapperCount}>
+    <div css={styWrapperCount} className="text-center">
       <h3 style={{ color: 'var(--secondary-bg)', fontWeight: 'normal' }}>{number}</h3>
       <span style={{ color: 'var(--secondary-bg)', fontWeight: 'normal' }}>{text}</span>
     </div>

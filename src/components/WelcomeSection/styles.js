@@ -4,6 +4,9 @@ import Background from './assets/pelangi.jpg';
 export const styHero = css`
   width: 100%;
   height: 100vh;
+  background-size: cover;
+  background-image: url(${Background});
+  background-position: center;
 
   .overlay {
     background: rgba(0, 0, 0, 0.3);
@@ -126,11 +129,7 @@ export const styScrollWrapper = css`
 `;
 
 export const styBackground = css`
-  background-size: cover;
-  background-image: url(${Background});
-  background-position: center;
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,7 +157,7 @@ export const styBackground = css`
 
 export const styWrapper = css`
   color: #fff;
-  margin-top: -30rem;
+  margin-top: 24px;
 
   img {
     max-width: 80px;
@@ -239,8 +238,6 @@ export const styWrapper = css`
   }
 
   @media screen and (max-width: 500px) {
-    margin-top: -33rem;
-
     h1 {
       font-size: 6rem;
     }
