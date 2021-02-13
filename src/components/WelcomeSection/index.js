@@ -15,6 +15,8 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
   const [loading, setLoading] = useState(false);
   const [alreadyDownloadData, setAlreadyDownloadData] = useState(false);
 
+  console.log('=> guestName', guestName);
+
   const handleScrollTo = () => {
     /** scroll into detail view */
     const element = document.getElementById('id-hello-section').offsetTop;
@@ -46,17 +48,6 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
     }
   };
 
-  const renderGuestSection = () => {
-    if (!guestName) return null;
-
-    return (
-      <div style={{ marginTop: '4rem' }}>
-        <h3 className="to-dearest">To our Dearest</h3>
-        <h2 className="to-dearest-name">{guestName}</h2>
-      </div>
-    );
-  };
-
   return (
     <div className="fh5co-cover" css={styHero}>
       <header css={styBackground}>
@@ -73,7 +64,12 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
                   <Countdown />
                 </div>
               </WithAnimation>
-              <WithAnimation>{renderGuestSection()}</WithAnimation>
+              {guestName && (
+                <div style={{ marginTop: '4rem' }}>
+                  <h3 className="to-dearest">To our Dearest</h3>
+                  <h2 className="to-dearest-name">{guestName}</h2>
+                </div>
+              )}
             </div>
           </div>
         </div>
