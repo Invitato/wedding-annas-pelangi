@@ -218,11 +218,10 @@ export const styWrapper = css`
   .to-dearest-name {
     border-bottom: 1px solid;
     padding-bottom: 12px;
-    max-width: 250px;
+    max-width: 350px;
     margin: auto auto 30px auto;
-    font-family: var(--font-family-title);
-    font-weight: normal;
-    font-size: 1.6em;
+    font-weight: bold;
+    font-size: 1.8rem;
   }
 
   .margin__bottom {

@@ -46,6 +46,17 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
     }
   };
 
+  const renderGuestSection = () => {
+    if (!guestName) return null;
+
+    return (
+      <div style={{ marginTop: '4rem' }}>
+        <h3 className="to-dearest">To our Dearest</h3>
+        <h2 className="to-dearest-name">{guestName}</h2>
+      </div>
+    );
+  };
+
   return (
     <div className="fh5co-cover" css={styHero}>
       <header css={styBackground}>
@@ -57,15 +68,16 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
                 <h2 className="text__date">The wedding of</h2>
                 <h1 className="text__title">{THE_BRIDE}</h1>
               </WithAnimation>
+              <WithAnimation>
+                <div style={{ marginTop: guestName ? '20rem' : '30rem' }}>
+                  <Countdown />
+                </div>
+              </WithAnimation>
+              <WithAnimation>{renderGuestSection()}</WithAnimation>
             </div>
           </div>
         </div>
       </header>
-      <WithAnimation>
-        <div style={{ marginTop: '33rem' }}>
-          <Countdown />
-        </div>
-      </WithAnimation>
       <div className="row">
         <ScrollToDown loading={loading} onClick={handleShowDetail} />
       </div>

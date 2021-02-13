@@ -11,7 +11,7 @@ export const styWrapperCount = css`
   width: 80px;
   height: 80px;
   border: 1px solid white;
-  background-color: transparent;
+  background-color: #aeaeae;
   margin: 8px 8px 16px 8px;
   border-radius: 50%;
   position: relative;
@@ -19,15 +19,14 @@ export const styWrapperCount = css`
   animation: pulse 2s infinite alternate;
   
   span {
-    font-weight: bold;
     text-transform: none;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   h3 {
     font-size: 24px;
     color: var(--font-primary);
-    font-weight: normal;
+    font-weight: bold;
     margin: 20px 0 0 0;
   }
 
