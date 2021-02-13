@@ -24,11 +24,6 @@ body {
   margin: 0 auto;
 }
 
-.container {
-  width: 100%;
-  max-width: 768px;
-}
-
 /**
   * chore styles 
   * author: Indra Kusuma
@@ -41,6 +36,10 @@ body {
 
 .text__sub-title {
   font-size: 1.5em;
+}
+
+.container {
+  border-radius: 16px;
 }
 
 .color__primary {

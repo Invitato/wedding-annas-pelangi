@@ -1,10 +1,15 @@
 import { css } from '@emotion/core';
-import Background from './img/bg-cream.png';
+import Wave from '../QuranSection/assets/quran.png';
 
 export const styWrapper = (withBackground) => css`
   width: 100%;
   padding: var(--size-content-padding);
+  padding-top: 0 !important;
   background-color: #fefdfd;
+  background: var(--secondary-bg);
+  background-image: url(${Wave});
+  background-position: bottom center;
+  background-repeat: no-repeat;
 
   .text__salam {
     text-align: center;
@@ -14,6 +19,10 @@ export const styWrapper = (withBackground) => css`
     h4 {
       color: var(--font-primary);
     }
+  }
+
+  .parent-name {
+    color: var(--font-black-ui);
   }
 
   .desc-groom,

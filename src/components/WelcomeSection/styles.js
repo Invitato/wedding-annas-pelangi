@@ -6,7 +6,7 @@ export const styHero = css`
   height: 100vh;
   background-size: cover;
   background-image: url(${Background});
-  background-position: center;
+  background-position: top;
 
   .overlay {
     background: rgba(0, 0, 0, 0.3);

@@ -5,7 +5,7 @@ export const styWrapper = css`
   padding: var(--size-content-padding);
   background-image: url(${Background});
   background-size: cover;
-  background-position: center;
+  background-position: top;
   width: 100%;
   color: var(--font-black-ui);
 

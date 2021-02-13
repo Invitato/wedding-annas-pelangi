@@ -1,6 +1,12 @@
 import { css } from '@emotion/core';
+import Wave from './assets/wave.svg';
 
 export const styWrapper = css`
+  background: var(--secondary-bg);
+  background-image: url(${Wave});
+  background-position: bottom center;
+  background-repeat: no-repeat;
+
   .info {
     font-size: 16px;
   }
@@ -11,6 +17,11 @@ export const styWrapper = css`
       line-height: 2;
       font-size: 16px;
     }
+  }
+
+  .main-font {
+    font-size: 3rem;
+    color: var(--primary-font);
   }
 `;
 

@@ -13,13 +13,15 @@ function HelloSection() {
   return (
     <Fragment>
       <div id="fh5co-couple" css={styWrapper}>
-        <div className="container" style={{ maxWidth: '1200px' }}>
+        <div className="container" style={{ backgroundColor: 'rgba(255, 255, 255, 0.76)', paddingBottom: '32px' }}>
           <div className="row">
             <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
               <WithAnimation>
-                <h2 className="text__salam">BISMILLAHIRAHMANIRRAHIIM</h2>
+                <h2 className="text__salam" style={{ marginTop: '24px' }}>
+                  BISMILLAHIRAHMANIRRAHIIM
+                </h2>
                 <h2 className="text__salam">Assalamualaikum Wr. Wb</h2>
-                <p>
+                <p style={{ color: 'var(--font-black-ui)' }}>
                   Dengan memohon Rahmat dan Ridho Illahi, teriring niat menjalankan Sunnah Rasulullah ﷺ untuk membentuk
                   rumah tangga yang Sakinah, Mawaddah wa Rahmah, kami mohon do'a agar senantiasa diberikan kelancaran
                   dan keberkahan.

@@ -9,8 +9,8 @@ function HelloSection({ isInvitation }) {
   return (
     <Fragment>
       <div id="id-hello-section" css={styWrapper}>
-        <div style={{ backgroundColor: 'rgb(255,255,255,0.76)' }}>
-          <div className="container">
+        <div>
+          <div className="container" style={{ backgroundColor: 'rgb(255,255,255,0.76)' }}>
             <div className="row" style={{ paddingTop: '2em' }}>
               <WithAnimation delay={500}>
                 <h3 className="text__title color__primary">The Wedding Of {THE_BRIDE}</h3>
