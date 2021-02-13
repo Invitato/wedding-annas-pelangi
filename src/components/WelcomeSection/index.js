@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { object, string, bool, func } from 'prop-types';
 import { animateScroll } from 'react-scroll';
 
@@ -14,6 +14,7 @@ const DELAY_TIME = 1500;
 function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, codeLink, onClickDetail }) {
   const [loading, setLoading] = useState(false);
   const [alreadyDownloadData, setAlreadyDownloadData] = useState(false);
+  const [isHasName, setIsHasName] = useState(false);
 
   const handleScrollTo = () => {
     /** scroll into detail view */
@@ -21,7 +22,7 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
     animateScroll.scrollTo(element);
   };
 
-  console.log('=> LATEST VERSION', { guestName });
+  console.log('=> LATEST VERSION', { guestName, isHasName });
 
   const handleShowDetail = () => {
     if (loading) return undefined;
@@ -48,6 +49,12 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
     }
   };
 
+  useEffect(() => {
+    if (guestName) {
+      setIsHasName(true);
+    }
+  }, [guestName]);
+
   const renderDearest = () => {
     return (
       <div style={{ marginTop: '4rem' }}>
@@ -68,12 +75,12 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
                 <h2 className="text__date">The wedding of</h2>
                 <h1 className="text__title">{THE_BRIDE}</h1>
               </WithAnimation>
-              <div css={guestName ? styMarginFinal(20) : styMarginFinal(30)}>
+              <div css={isHasName ? styMarginFinal(20) : styMarginFinal(30)}>
                 <WithAnimation>
                   <Countdown />
                 </WithAnimation>
               </div>
-              {guestName && renderDearest()}
+              {isHasName && renderDearest()}
             </div>
           </div>
         </div>
