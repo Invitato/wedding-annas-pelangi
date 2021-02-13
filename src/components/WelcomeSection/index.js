@@ -15,7 +15,8 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
   const [loading, setLoading] = useState(false);
   const [alreadyDownloadData, setAlreadyDownloadData] = useState(false);
 
-  console.log('=> guestName', guestName);
+  const marginItem = guestName ? '20rem' : '30rem';
+  console.log('=> guestName', { guestName, marginItem });
 
   const handleScrollTo = () => {
     /** scroll into detail view */
@@ -60,7 +61,7 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
                 <h1 className="text__title">{THE_BRIDE}</h1>
               </WithAnimation>
               <WithAnimation>
-                <div style={{ marginTop: guestName ? '20rem' : '30rem' }}>
+                <div style={{ marginTop: marginItem }}>
                   <Countdown />
                 </div>
               </WithAnimation>
