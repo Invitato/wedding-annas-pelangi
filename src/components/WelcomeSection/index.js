@@ -15,9 +15,6 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
   const [loading, setLoading] = useState(false);
   const [alreadyDownloadData, setAlreadyDownloadData] = useState(false);
 
-  const marginItem = guestName ? '20rem' : '30rem';
-  console.log('=> guestName', { guestName, marginItem });
-
   const handleScrollTo = () => {
     /** scroll into detail view */
     const element = document.getElementById('id-hello-section').offsetTop;
@@ -49,6 +46,15 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
     }
   };
 
+  const renderDearest = () => {
+    return (
+      <div style={{ marginTop: '4rem' }}>
+        <h3 className="to-dearest">To our Dearest</h3>
+        <h2 className="to-dearest-name">{guestName}</h2>
+      </div>
+    );
+  };
+
   return (
     <div className="fh5co-cover" css={styHero}>
       <header css={styBackground}>
@@ -60,16 +66,23 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
                 <h2 className="text__date">The wedding of</h2>
                 <h1 className="text__title">{THE_BRIDE}</h1>
               </WithAnimation>
-              <div style={{ marginTop: marginItem }}>
-                <WithAnimation>
-                  <Countdown />
-                </WithAnimation>
-              </div>
-              {guestName && (
-                <div style={{ marginTop: '4rem' }}>
-                  <h3 className="to-dearest">To our Dearest</h3>
-                  <h2 className="to-dearest-name">{guestName}</h2>
-                </div>
+              {guestName ? (
+                <>
+                  <div style={{ marginTop: '20rem' }}>
+                    <WithAnimation>
+                      <Countdown />
+                    </WithAnimation>
+                  </div>
+                  {renderDearest()}
+                </>
+              ) : (
+                <>
+                  <div style={{ marginTop: '30rem' }}>
+                    <WithAnimation>
+                      <Countdown />
+                    </WithAnimation>
+                  </div>
+                </>
               )}
             </div>
           </div>
