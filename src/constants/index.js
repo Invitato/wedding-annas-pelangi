@@ -18,7 +18,7 @@ export const BOY_PARENT_NAME = `Putra dari Bapak Mahmud Fachruddin (Alm) <br />&
  * @constants - SEO Requirement
  */
 export const SEO_IMAGE =
-  'https://user-images.githubusercontent.com/10141928/107609723-67e40380-6c72-11eb-8478-a5053c013bea.png';
+  'https://user-images.githubusercontent.com/10141928/107841647-1a40d580-6def-11eb-9c2a-551fe39dcc4d.jpg';
 export const SEO_URL = 'https://invitato.net/';
 export const SEO_TITLE = `The Wedding of ${THE_BRIDE} by Invitato.net`;
 export const SEO_DESCRIPTION = `Dengan memohon Rahmat dan Ridho Illahi, teriring niat menjalankan Sunnah Rasulullah ﷺ untuk membentuk rumah tangga yang Sakinah, Mawaddah wa Rahmah, kami mohon do'a agar senantiasa diberikan kelancaran dan keberkahan. - ${THE_BRIDE}`;
