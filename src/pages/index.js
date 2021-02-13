@@ -23,6 +23,8 @@ function Home({ location }) {
 
   const [showDetailContent, setShowDetailContent] = useState(false);
 
+  console.log('=> location', location);
+
   const handleClickDetail = () => {
     setShowDetailContent(true);
   };

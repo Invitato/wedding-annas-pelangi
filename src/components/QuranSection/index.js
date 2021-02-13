@@ -3,6 +3,7 @@ import { bool } from 'prop-types';
 
 import { THE_BRIDE } from '@/constants';
 import WithAnimation from '../WithAnimation/UseIntersect';
+import Transition from '../PhotoSection/assets/10.jpg';
 import { styWrapper } from './styles';
 
 function HelloSection({ isInvitation }) {
@@ -36,6 +37,7 @@ function HelloSection({ isInvitation }) {
           </div>
         </div>
       </div>
+      <img style={{ width: '100%', marginTop: '-4rem' }} src={Transition} alt="" loading="lazy" />
     </Fragment>
   );
 }

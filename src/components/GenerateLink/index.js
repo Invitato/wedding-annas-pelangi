@@ -49,7 +49,12 @@ function GenerateLink() {
               placeholder="Nama tamu.."
             ></input>
           </div>
-          <button type="submit" class="btn btn-primary" onClick={() => setShowResult(true)}>
+          <button
+            type="submit"
+            class="btn"
+            style={{ backgroundColor: 'var(--font-primary)', border: 'none', color: 'white' }}
+            onClick={() => setShowResult(true)}
+          >
             Generate Link
           </button>
         </Fragment>
@@ -59,7 +64,12 @@ function GenerateLink() {
     if (type === ALL) {
       return (
         <Fragment>
-          <button type="submit" class="btn btn-primary" onClick={() => setShowResult(true)}>
+          <button
+            type="submit"
+            class="btn"
+            style={{ backgroundColor: 'var(--font-primary)', border: 'none', color: 'white' }}
+            onClick={() => setShowResult(true)}
+          >
             Generate Link
           </button>
         </Fragment>
@@ -124,7 +134,11 @@ function GenerateLink() {
                         </a>
                         <button
                           className="btn btn-default btn-sm"
-                          style={{ fontSize: '12px', padding: '4px 8px', marginLeft: '4px' }}
+                          style={{
+                            fontSize: '12px',
+                            padding: '4px 8px',
+                            marginLeft: '4px',
+                          }}
                           onClick={() => handleCopy(mapURL, true)}
                         >
                           copy
