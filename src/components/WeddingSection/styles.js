@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import Background from '../PhotoSection/assets/1.jpeg';
+import Background from './assets/wedding.jpg';
 
 export const styWrapper = css`
   padding: var(--size-content-padding);
@@ -59,7 +59,7 @@ export const styEventBox = css`
     padding-bottom: 16px;
     font-size: 2.5rem;
     border-bottom: 1px solid #fff;
-    font-family: var(--font-family-title);
+    // font-family: var(--font-family-title);
     color: #fff;
   }
 

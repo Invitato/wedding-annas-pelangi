@@ -24,9 +24,11 @@ function WeddingSection({ isInvitation }) {
             <WithAnimation>
               <h3 className="main-font color__primary text__title">
                 Akad Nikah & <br />
-                Intimate Wedding
+                Syukuran Pernikahan
               </h3>
-              <p className="text__sub">Insya Allah akan diselenggarakan pada:</p>
+              <p className="text__sub" style={{ marginTop: '16px' }}>
+                Insya Allah akan diselenggarakan pada:
+              </p>
             </WithAnimation>
           </div>
         </div>
@@ -42,7 +44,7 @@ function WeddingSection({ isInvitation }) {
             </WithAnimation>
             <WithAnimation delay={800} className="col-md-6 col-sm-6">
               <WeddingInfoBox
-                title="Intimate Wedding"
+                title="Syukuran Pernikahan"
                 time={WEDDING_RESEPSI_TIME}
                 date={WEDDING_RESEPSI}
                 description={WEDDING_LOCATION}
