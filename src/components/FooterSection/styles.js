@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import Background from '@assets/img/pattern-2.png';
+import Background from './assets/bg.jpeg';
 
 export const styWrapper = (withBackground = true) => css`
   background-color: var(--secondary-bg);
@@ -8,11 +8,9 @@ export const styWrapper = (withBackground = true) => css`
 
   ${withBackground &&
   `background-image: url(${Background});
-  background-position: bottom;
+  background-position: bottom left;
   background-repeat: no-repeat;
-  background-repeat-y: no-repeat;
-  background-repeat-x: repeat;
-  background-size: auto;`}
+  background-size: cover;`}
 
   .img__arrow {
     display: block;

@@ -3,6 +3,7 @@ import { bool } from 'prop-types';
 
 import WithAnimation from '../WithAnimation';
 import CopyRight from './CopyRight';
+import Wishes from '../WishesSection';
 // import EmbedLive from './EmbedLive';
 import { styWrapper } from './styles';
 
@@ -11,8 +12,8 @@ function FooterSection({ isInvitation }) {
     <>
       {/* <EmbedLive /> */}
       {/* <GiftCard /> */}
-      <div css={styWrapper}>
-        <div className="secondary-bg" style={{ padding: '0 16px' }}>
+      <div css={styWrapper(true)}>
+        <div style={{ padding: '0 16px' }}>
           <div className="row padding__content">
             <div className="col-md-8 col-md-offset-2 text-center">
               <WithAnimation>
@@ -30,7 +31,7 @@ function FooterSection({ isInvitation }) {
             </div>
           </div>
         </div>
-        <hr className="border" />
+        <Wishes />
         <WithAnimation>
           <CopyRight />
         </WithAnimation>

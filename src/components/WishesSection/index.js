@@ -129,47 +129,53 @@ function WishesSection() {
     }
   }, []);
 
+  const renderForm = () => {
+    return (
+      <WithAnimation delay={200}>
+        <div>
+          <form css={styForm} onSubmit={handleSubmit}>
+            {renderAlert()}
+            <div className="form-group">
+              <input
+                type="Nama"
+                className="form-control"
+                min="6"
+                placeholder="Nama Anda"
+                value={name}
+                onChange={(e) => handleSetState(e, setName)}
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                type="text"
+                className="form-control"
+                placeholder="Doa & Ucapan"
+                value={ucapan}
+                onChange={(e) => handleSetState(e, setUcapan)}
+              />
+            </div>
+            <button type="submit" value="Submit" className="btn btn-default buttonForm">
+              {loading ? 'Memproses...' : 'Kirim Ucapan'}
+            </button>
+          </form>
+        </div>
+      </WithAnimation>
+    );
+  };
+
   return (
     <>
-      <div className="container">
+      <div className="container" style={{ backgroundColor: 'rgb(255,255,255, 0.9)', padding: '32px 16px' }}>
         <div className="row">
           <WithAnimation>
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                <h2 className="main-font pr-co">Ucapkan Sesuatu</h2>
-                <p>Kirimkan do'a & ucapan untuk kami.</p>
+                <h2 className="main-font pr-co">Best Wishes</h2>
+                <p style={{ fontSize: '1.5rem', marginTop: '-16px' }}>Kirimkan do'a & ucapan untuk kami.</p>
               </div>
             </div>
           </WithAnimation>
-          <WithAnimation delay={200}>
-            <div>
-              <form css={styForm} onSubmit={handleSubmit}>
-                {renderAlert()}
-                <div className="form-group">
-                  <input
-                    type="Nama"
-                    className="form-control"
-                    min="6"
-                    placeholder="Nama Anda"
-                    value={name}
-                    onChange={(e) => handleSetState(e, setName)}
-                  />
-                </div>
-                <div className="form-group">
-                  <textarea
-                    type="text"
-                    className="form-control"
-                    placeholder="Doa & Ucapan"
-                    value={ucapan}
-                    onChange={(e) => handleSetState(e, setUcapan)}
-                  />
-                </div>
-                <button type="submit" value="Submit" className="btn btn-default buttonForm">
-                  {loading ? 'Memproses...' : 'Kirim Ucapan'}
-                </button>
-              </form>
-            </div>
-          </WithAnimation>
+          {renderForm()}
           <WithAnimation>
             <div className="row">
               <div className="col-md-12">
@@ -179,7 +185,6 @@ function WishesSection() {
           </WithAnimation>
         </div>
       </div>
-      <div id="fh5co-testimonial" css={styWrapper} />
     </>
   );
 }

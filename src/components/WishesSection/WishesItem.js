@@ -9,14 +9,12 @@ function WishesItem({ image, name, infoName, description, isActive }) {
     return (
       <div className="item" css={styWrapperItem}>
         <div className={`testimony-slide text-center ${isActive ? 'active' : 'hide'}`}>
-          <blockquote>
-            <p className="description">
-              <i>{description}</i>
-            </p>
-            <p className="author">
-              dari <b>{name}</b>
-            </p>
-          </blockquote>
+          <p className="text-center" style={{ fontSize: '1.8rem'}}>
+            <i>{`"${description}"`}</i>
+          </p>
+          <p style={{ textAlign: 'center', marginTop: '-8px' }}>
+            dari <b>{name}</b>
+          </p>
         </div>
       </div>
     );
