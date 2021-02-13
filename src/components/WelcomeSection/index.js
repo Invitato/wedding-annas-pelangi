@@ -48,13 +48,17 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
   return (
     <div css={styHero}>
       <header className="fh5co-cover" css={styBackground}>
-        <div className="overlay" />
+        {/* <div className="overlay" /> */}
         <div className="container">
           <div className="row" css={styWrapper}>
             <div className="col-md-8 col-md-offset-2 text-center">
               <WithAnimation>
-                <h2 className="text__date">The wedding of</h2>
-                <h1 style={{ fontFamily: 'Tangerine, sans-serif' }}>{THE_BRIDE}</h1>
+                <h2 className="text__date">
+                  <span className="text__span">The wedding of</span>
+                </h2>
+                <h1 className="text__title">
+                  <span className="text__span">{THE_BRIDE}</span>
+                </h1>
               </WithAnimation>
             </div>
           </div>

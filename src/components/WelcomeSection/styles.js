@@ -1,9 +1,13 @@
 import { css, keyframes } from '@emotion/core';
-import Background from './assets/desktop.jpeg';
+import Background from './assets/pelangi.jpg';
 
 export const styHero = css`
   width: 100%;
   height: 100vh;
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
 `;
 
 const radarAnimation = keyframes`
@@ -154,7 +158,7 @@ export const styBackground = css`
 
 export const styWrapper = css`
   color: #fff;
-  margin-top: -10rem;
+  margin-top: -30rem;
 
   img {
     max-width: 80px;
@@ -187,13 +191,23 @@ export const styWrapper = css`
     margin-top: -12px;
   }
 
+  .text__span {
+    background-color: white;
+    color: var(--font-black-ui);
+    padding: 8px 16px;
+  }
+
   .text__date {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: normal;
-    margin-bottom: -3rem;
+    margin-bottom: -2px;
     margin-top: 1rem;
-    margin-bottom: -3rem;
     text-transform: uppercase;
+  }
+
+  .text__title {
+    font-family: var(--font-family-title);
+    font-size: 6rem;
   }
 
   .to-dearest {
@@ -225,12 +239,18 @@ export const styWrapper = css`
   }
 
   @media screen and (max-width: 500px) {
+    margin-top: -33rem;
+
     h1 {
       font-size: 6rem;
     }
 
     .text__date {
       font-size: 1.5rem;
+    }
+
+    .text__title {
+      font-size: 4rem;
     }
 
     img {
