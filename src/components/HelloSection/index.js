@@ -6,8 +6,8 @@ import { GIRL_NAME, GIRL_PARENT_NAME, BOY_NAME, BOY_PARENT_NAME } from '@/consta
 import WithAnimationLazy from '../WithAnimation';
 import WithAnimation from '../WithAnimation/UseIntersect';
 import { styWrapper } from './styles';
-import Bride from './img/Fivtina.jpeg';
-import Grom from './img/Rizky.jpeg';
+import Bride from './img/pelangi.jpg';
+import Grom from './img/anas.jpg';
 
 function HelloSection() {
   return (
