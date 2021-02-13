@@ -157,7 +157,7 @@ export const styBackground = css`
 
 export const styWrapper = css`
   color: #fff;
-  margin-top: 24px;
+  margin-top: 5rem;
 
   img {
     max-width: 80px;
@@ -199,7 +199,7 @@ export const styWrapper = css`
   .text__date {
     font-size: 3rem;
     font-weight: normal;
-    margin-bottom: -2px;
+    margin-bottom: -2rem;
     margin-top: 1rem;
     text-transform: uppercase;
   }

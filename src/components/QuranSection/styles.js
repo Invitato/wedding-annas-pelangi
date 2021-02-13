@@ -5,15 +5,10 @@ export const styWrapper = css`
   padding: var(--size-content-padding);
   background: var(--secondary-bg);
   background-image: url(${Background});
-  background-position: bottom;
+  background-position: bottom center;
   background-repeat: no-repeat;
   background-repeat-y: no-repeat;
-  background-repeat-x: repeat;
   background-size: auto;
-
-  @media screen and (max-width: 500px) {
-    min-height: 100vh;
-  }
 
   .title {
     font-size: 4em;

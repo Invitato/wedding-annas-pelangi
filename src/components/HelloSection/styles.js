@@ -9,18 +9,21 @@ export const styWrapper = (withBackground) => css`
   .text__salam {
     text-align: center;
     color: var(--font-primary);
+    font-size: 2rem;
 
     h4 {
       color: var(--font-primary);
     }
   }
 
-  ${withBackground &&
-  `
-    background-image: url(${Background});
-    background-size: cover;
-    background-position: bottom;
-  `}
+  .desc-groom,
+  .desc-bride {
+    h3 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--font-primary);
+    }
+  }
 
   .sub-title {
     color: #828282;
@@ -36,9 +39,19 @@ export const styWrapper = (withBackground) => css`
     font-weight: bold;
   }
 
+  .and-love {
+    font-size: 5rem !important;
+    color: var(--font-primary);
+  }
+
+  .parent-name {
+    font-weight: normal;
+  }
+
   p {
     font-size: 16px;
     margin-top: 16px;
+    color: var(--font-primary);
   }
 
   .text__bride,

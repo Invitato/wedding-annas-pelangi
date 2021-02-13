@@ -9,12 +9,12 @@ function HelloSection({ isInvitation }) {
   return (
     <Fragment>
       <div id="id-hello-section" css={styWrapper}>
-        <WithAnimation delay={500}>
-          <h3 className="text__title">The Wedding Of {THE_BRIDE}</h3>
-        </WithAnimation>
         <div style={{ backgroundColor: 'rgb(255,255,255,0.76)' }}>
           <div className="container">
             <div className="row" style={{ paddingTop: '2em' }}>
+              <WithAnimation delay={500}>
+                <h3 className="text__title color__primary">The Wedding Of {THE_BRIDE}</h3>
+              </WithAnimation>
               <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
                 <WithAnimation delay={700}>
                   <p className="text__arabic">
