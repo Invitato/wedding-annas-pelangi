@@ -60,11 +60,11 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, code
                 <h2 className="text__date">The wedding of</h2>
                 <h1 className="text__title">{THE_BRIDE}</h1>
               </WithAnimation>
-              <WithAnimation>
-                <div style={{ marginTop: marginItem }}>
+              <div style={{ marginTop: marginItem }}>
+                <WithAnimation>
                   <Countdown />
-                </div>
-              </WithAnimation>
+                </WithAnimation>
+              </div>
               {guestName && (
                 <div style={{ marginTop: '4rem' }}>
                   <h3 className="to-dearest">To our Dearest</h3>
