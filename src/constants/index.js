@@ -44,9 +44,9 @@ export const EPOCH_END_EVENT = 1614409200;
  * @constants - wedding information
  */
 export const WEDDING_AKAD = 'Sabtu, 27 Februari 2021';
-export const WEDDING_AKAD_TIME = '09.00 - 11.00 WIB';
+export const WEDDING_AKAD_TIME = '08.30 - 10.30 WIB';
 export const WEDDING_RESEPSI = WEDDING_AKAD;
-export const WEDDING_RESEPSI_TIME = '11.00 - 14.00 WIB';
+export const WEDDING_RESEPSI_TIME = '10.30 WIB - Selesai';
 export const WEDDING_LOCATION = `Stitaco Premium <br />Jl. Cisalak No. 22, Sukamanah, Tasikmalaya`;
 export const WEDDING_LOCATION_AKAD = WEDDING_LOCATION;
 export const WEDDING_DATE = '27.02.2021';
@@ -62,8 +62,8 @@ export const SOUND_URL = 'https://youtu.be/1oD8_8HnH1s';
  * @constant
  * Live streaming & youtube Live
  */
-export const YOUTUBE_LINK = 'https://youtu.be/Hfd7SJv0_0M';
-export const YOUTUBE_EMBED = 'https://www.youtube.com/embed/Hfd7SJv0_0M';
+export const YOUTUBE_LINK = 'https://youtu.be/G4MhS1Hg2V8';
+export const YOUTUBE_EMBED = 'https://www.youtube.com/embed/G4MhS1Hg2V8';
 
 /**
  * @constant

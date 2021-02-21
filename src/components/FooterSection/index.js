@@ -4,13 +4,13 @@ import { bool } from 'prop-types';
 import WithAnimation from '../WithAnimation/UseIntersect';
 import CopyRight from './CopyRight';
 import Wishes from '../WishesSection';
-// import EmbedLive from './EmbedLive';
+import EmbedLive from './EmbedLive';
 import { styWrapper } from './styles';
 
 function FooterSection({ isInvitation }) {
   return (
     <>
-      {/* <EmbedLive /> */}
+      <EmbedLive />
       {/* <GiftCard /> */}
       <div css={styWrapper(true)}>
         <div style={{ padding: '0 16px' }}>
