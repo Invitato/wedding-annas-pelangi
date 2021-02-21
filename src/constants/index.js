@@ -37,7 +37,7 @@ export const GOOGLE_MAPS_ADDRESS = 'Stitaco Premium, Jl. Cisalak No. 22, Sukaman
  * use this website for convert local time to epoch time
  * https://www.epochconverter.com/
  */
-export const EPOCH_START_EVENT = 1614391200;
+export const EPOCH_START_EVENT = 1614389400;
 export const EPOCH_END_EVENT = 1614409200;
 
 /**
