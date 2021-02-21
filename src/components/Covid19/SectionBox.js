@@ -5,7 +5,7 @@ import { styBoxWrapper } from './styles';
 
 function SectionBox({ icon, text }) {
   return (
-    <div className="col-md-4" css={styBoxWrapper}>
+    <div className="col-md-6" css={styBoxWrapper}>
       {icon && (
         <div className="img-section">
           <img src={icon} alt="icon" className="img" />

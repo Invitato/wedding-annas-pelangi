@@ -38,7 +38,7 @@ function HelloSection() {
               </div>
               <div className="desc-groom">
                 <WithAnimation>
-                  <h3>{GIRL_NAME}</h3>
+                  <h3 style={{ fontWeight: 'normal' }}>{GIRL_NAME}</h3>
                   <p className="parent-name parent-name__top" dangerouslySetInnerHTML={{ __html: GIRL_PARENT_NAME }} />
                 </WithAnimation>
               </div>
@@ -48,7 +48,7 @@ function HelloSection() {
             </p>
             <div className="and-love">
               <WithAnimation>
-                <i>&</i>
+                <i style={{ fontWeight: 'normal' }}>&</i>
               </WithAnimation>
             </div>
             <div className="couple-half">
@@ -59,7 +59,7 @@ function HelloSection() {
               </div>
               <div className="desc-bride">
                 <WithAnimation>
-                  <h3>{BOY_NAME}</h3>
+                  <h3 style={{ fontWeight: 'normal' }}>{BOY_NAME}</h3>
                   <p className="parent-name" dangerouslySetInnerHTML={{ __html: BOY_PARENT_NAME }} />
                 </WithAnimation>
               </div>
